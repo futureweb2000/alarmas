@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>trabajar con flexible box  model</title>
+<style>
+*{  margin:0px;
+    padding:0px;
+	text-align:center;
+    
+	}
+body {
+        width:100%;	
+	}
+ .flexBox{
+	      background-color:gray;    /* esta section es padre de los divs*/
+		  border:2px solid black; 
+		  margin:20px;
+		        display:-webkit-box;
+		         -webkit-box-orient:horizontal;
+				 width:600px; /*y 	uitando en width del padre hace que se haga flexible el uno y dos */
+		  	 }
+	 /*
+.flexBox > div{  
+				  -webkit-box-flex:1;
+ }*/
+
+#rojo {
+	      padding:20px;
+		  margin:10px;
+		  background-color:red;
+		   -webkit-box-flex:1;
+	}
+	
+	#verde {
+	      padding:20px;
+		  margin:10px;
+		  background-color:green;
+		   -webkit-box-flex:1 /*2*/; /* la numeracion del box felx  hace  aumentar su tamano el doble o segun el num*/
+	}                                   /*ademas  existe otra  forma donde podemos elegir si queremos una seccion elastica  o  no*/
+	
+	#naranja{
+	      padding:20px;
+		  margin:10px;
+		  background-color:orange;
+		  width:200px;  /*de esta  forma se diviran en partes  iguales el 1  y 2*/
+	/* -webkit-box-flex: 1/*3*/;*/
+	}
+
+</style>                
+
+</head>
+
+<body>
+
+  <section class="flexBox">
+          <div id="rojo">Ejemplo 1</div>
+          
+          <div id="verde"> Ejemplo 2</div>
+          
+          <div id="naranja"> Ejemplo 3</div>
+  
+  </section>
+
+
+</body>
+</html>
